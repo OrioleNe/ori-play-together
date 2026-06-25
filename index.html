@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Ori Tools">
+  <meta name="theme-color" content="#47bbe8">
   <title>Ori Tools – Bộ Công Cụ</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -394,7 +399,7 @@
   <h1>Công cụ <span>Play Together</span><br/>dành cho bạn</h1>
   <p>Tập hợp các tiện ích hỗ trợ trò chơi Play Together — nhanh, gọn và dễ sử dụng ngay trên trình duyệt.</p>
   <div class="hero-cta">
-    <a href="https://ori-playtogether.vercel.app/su-kien-dai-khi-tuong" target="_blank" class="btn-primary">
+    <a href="./su-kien-dai-khi-tuong/" target="_self" class="btn-primary">
       Mở công cụ mới nhất
     </a>
     <button class="btn-install" id="btn-install" onclick="installApp()">
@@ -413,7 +418,7 @@
 
   <div class="tools-grid">
     <!-- Tool 1: Memory Board -->
-    <a href="https://ori-playtogether.vercel.app/su-kien-dai-khi-tuong" target="_blank" class="tool-card">
+    <a href="./su-kien-dai-khi-tuong/" target="_self" class="tool-card">
       <div class="card-icon">🃏</div>
       <span class="tag">Lật thẻ</span>
       <h3>Bảng Thẻ Nhớ</h3>
@@ -465,13 +470,20 @@
     short_name: "Ori Tools",
     description: "Bộ công cụ hỗ trợ game Play Together",
     start_url: "/",
+    scope: "/",
     display: "standalone",
+    orientation: "portrait",
     background_color: "#0f2044",
     theme_color: "#47bbe8",
     icons: [
       {
         src: "data:image/svg+xml," + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192"><rect width="192" height="192" rx="40" fill="#47bbe8"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="110">🎮</text></svg>`),
         sizes: "192x192",
+        type: "image/svg+xml"
+      },
+      {
+        src: "data:image/svg+xml," + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="100" fill="#47bbe8"/><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="300">🎮</text></svg>`),
+        sizes: "512x512",
         type: "image/svg+xml"
       }
     ]
